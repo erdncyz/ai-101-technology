@@ -149,7 +149,7 @@ window.addEventListener('message',e=>{if(location.origin!=='null'&&e.origin!==lo
 function toast(t){$('#toast').textContent=t;$('#toast').style.display='block';setTimeout(()=>$('#toast').style.display='none',4500);}
 window.addEventListener('hashchange',()=>{const n=Math.min(slides.length-1,Math.max(0,(parseInt(location.hash.slice(1))||1)-1));if(n!==index)go(n);});
 window.addEventListener('keydown',e=>{if(e.altKey||e.ctrlKey||e.metaKey||e.target.closest('video,input,textarea'))return;if($('#modal').open)return;if(e.key==='Escape'){if(document.fullscreenElement||document.webkitFullscreenElement){e.preventDefault();(document.exitFullscreen||document.webkitExitFullscreen).call(document);return;}if(document.documentElement.classList.contains('present')){e.preventDefault();document.documentElement.classList.remove('present');applyBodyChrome();syncFsButton();return;}}if(['ArrowRight','ArrowDown','PageDown',' ','ArrowLeft','ArrowUp','PageUp','Home','End'].includes(e.key)){if(e.key===' '&&e.target.closest('button,a'))return;e.preventDefault();}if(presenter){if(['ArrowRight','PageDown',' '].includes(e.key))command('next');if(['ArrowLeft','PageUp'].includes(e.key))command('prev');if(e.key.toLowerCase()==='t')command('timer');return;}if(['ArrowRight','ArrowDown','PageDown',' '].includes(e.key))go(index+1);if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key))go(index-1);if(e.key==='Home')go(0);if(e.key==='End')go(slides.length-1);if(e.key.toLowerCase()==='f')fullscreen();if(e.key.toLowerCase()==='g')openOverview();if(e.key.toLowerCase()==='p')openPresenter();if(e.key.toLowerCase()==='n')openPresenterWindow();if(e.key.toLowerCase()==='t')toggleTimer();});
-let touch=null;$('#stage').addEventListener('touchstart',e=>{if(e.target.closest('video,button'))return;touch=[e.changedTouches[0].clientX,e.changedTouches[0].clientY];},{passive:true});$('#stage').addEventListener('touchend',e=>{if(!touch)return;const dx=e.changedTouches[0].clientX-touch[0],dy=e.changedTouches[0].clientY-touch[1];if(Math.abs(dx)>65&&Math.abs(dx)>Math.abs(dy)*1.5)go(index+(dx<0?1:-1));touch=null;},{passive:true});render();setInterval(tick,1000);
+let touch=null;$('#stage').addEventListener('touchstart',e=>{if(e.target.closest('video,button'))return;touch=[e.changedTouches[0].clientX,e.changedTouches[0].clientY];},{passive:true});$('#stage').addEventListener('touchend',e=>{if(!touch)return;const dx=e.changedTouches[0].clientX-touch[0],dy=e.changedTouches[0].clientY-touch[1];if(Math.abs(dx)>65&&Math.abs(dx)>Math.abs(dy)*1.5)go(index+(dx<0?1:-1));touch=null;},{passive:true});
 
 function chooseTask(button,n){document.querySelectorAll('.choice-grid button').forEach(b=>{b.classList.remove('selected');b.setAttribute('aria-pressed','false');});button.classList.add('selected');button.setAttribute('aria-pressed','true');const answers=['AI ilgili bölümü bulabilir. Kararın güncelliğini ve kaynağını kontrol edersin.','AI ilk hâli kurabilir. Neyin kullanıcıya değer kattığını birlikte sınarsınız.','AI seçenekleri karşılaştırabilir. Hangi ödünleşimi kabul edeceğinize siz karar verirsiniz.','AI konuşmaya hazırlanmanı sağlayabilir. İlişkiyi kurmak ve konuşmayı yapmak sana kalır.'];$('#taskAnswer').textContent=answers[n];}
 function fanView(n,button){document.querySelectorAll('.fan-tabs button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));const views=[['“İlk 25 dakikada ne kaçırdım?”','Önemli olayların kısa özeti.<br>İzleyebileceğin ilgili anlara bağlantılar.'],['“Burada neden ofsayt verildi?”','Pozisyonun anlaşılır açıklaması.<br>Kuralı ilgili görüntüyle birlikte keşfetme.'],['“Bu değişiklik oyunu nasıl etkiler?”','Diziliş ve oyuncu rolleri üzerinden olası etkiler.<br>Doğrulanmış olay ile yorumun ayrı gösterimi.']];$('#fanOutput').innerHTML='<div class="fan-question">'+views[n][0]+'</div><div class="fan-response"><span>ÖNERİLEN DENEYİM</span><p>'+views[n][1]+'</p></div>';}
@@ -187,10 +187,12 @@ window.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#speakerNotes'))cl
 
 function openInfo(){
  $('#modalContent').innerHTML=`<h2>${slides.length} sahne · 10 dakika</h2>
- <p>Oklar / boşluk: ilerle · F: tam ekran · Esc: çık · G: sahne seçici · P: not paneli · N: 2. ekran notları · T: sayaç. Diğer ekran siyahsa: Sistem Ayarları → Masaüstü ve Dock → “Ekranların ayrı Spaces’leri var” açık olsun. 12. sahnede kısa videoyu oynat.</p>
+ <p>Oklar / boşluk: ilerle · F: tam ekran · Esc: çık · G: sahne seçici · P: not paneli · N: 2. ekran notları · T: sayaç. Diğer ekran siyahsa: Sistem Ayarları → Masaüstü ve Dock → “Ekranların ayrı Spaces’leri var” açık olsun. 11. sahnede kısa videoyu oynat.</p>
  <h2>Kaynaklar ve önerilen bağlantılar</h2>
  <ul class="source-list">
   <li><a href="https://developers.openai.com/api/docs/models" target="_blank" rel="noopener">OpenAI Model Catalog — model seçimi ve API fiyatları</a></li>
+  <li><a href="https://mercury-ai-bench.netlify.app/" target="_blank" rel="noopener">Mercury AI Bench — işe göre model ve fiyat-performans</a></li>
+  <li><a href="https://www.youtube.com/@venelin_valkov/videos" target="_blank" rel="noopener">Venelin Valkov — aynı prompt ile model karşılaştırmaları</a></li>
   <li><a href="https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference" target="_blank" rel="noopener">Google — medyan Gemini isteminin enerji ölçümü</a></li>
   <li><a href="https://modelcontextprotocol.io/" target="_blank" rel="noopener">Model Context Protocol — resmi dokümantasyon</a></li>
   <li><a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" target="_blank" rel="noopener">OpenAI — agent oluşturma rehberi</a></li>
@@ -210,15 +212,61 @@ function openInfo(){
  $('#modal').showModal();
 }
 
-function mountCarCallouts(){
- const visual=$('.model-car-visual');
- if(!visual||visual.querySelector('.callout-label'))return;
- [['tools-label','TOOLS','web · terminals · tools'],['guardrails-label','GUARDRAILS','kaporta']].forEach(([className,title,detail])=>{
-  const label=document.createElement('div');
-  label.className=`car-label callout-label ${className}`;
-  label.innerHTML=`<i></i><b>${title}</b><span>${detail}</span>`;
-  visual.appendChild(label);
+function parseSpeakerNotes(md){
+ const heading=/^##\s+(\d+)\.\s+(.+?)\s+—\s+(\d+)\s+sn\s*$/gm;
+ const hits=[];
+ let m;
+ while((m=heading.exec(md))){
+  hits.push({n:+m[1],title:m[2].trim(),time:+m[3],at:m.index});
+ }
+ return hits.map((hit,i)=>{
+  const start=md.indexOf('\n',hit.at)+1;
+  const end=i+1<hits.length?hits[i+1].at:md.length;
+  return {n:hit.n,title:hit.title,time:hit.time,notes:md.slice(start,end).replace(/^\s+|\s+$/g,'')};
  });
 }
-new MutationObserver(mountCarCallouts).observe($('#stage'),{childList:true});
-mountCarCallouts();
+function applySpeakerNotes(md){
+ parseSpeakerNotes(md).forEach(sec=>{
+  const slide=slides[sec.n-1];
+  if(!slide)return;
+  slide.title=sec.title;
+  slide.time=sec.time;
+  slide.notes=sec.notes;
+ });
+}
+async function loadSpeakerNotesMarkdown(){
+ const embedded=typeof SPEAKER_NOTES_MD==='string'?SPEAKER_NOTES_MD:'';
+ if(location.protocol==='file:')return embedded;
+ try{
+  const res=await fetch('Konusmaci-notlari.md',{cache:'no-store'});
+  if(res.ok)return await res.text();
+ }catch(err){
+  console.warn('Konuşmacı notları fetch edilemedi, gömülü kopya kullanılıyor:',err);
+ }
+ return embedded;
+}
+async function boot(){
+ try{
+  const md=await loadSpeakerNotesMarkdown();
+  if(!md)throw new Error('not metni boş');
+  applySpeakerNotes(md);
+  const missing=slides.findIndex(s=>!s.notes);
+  if(missing!==-1){
+   if(typeof SPEAKER_NOTES_MD==='string'&&SPEAKER_NOTES_MD&&md!==SPEAKER_NOTES_MD){
+    applySpeakerNotes(SPEAKER_NOTES_MD);
+   }
+   if(slides.findIndex(s=>!s.notes)!==-1)throw new Error('Eksik not: slayt '+(missing+1));
+  }
+ }catch(err){
+  console.warn('Konuşmacı notları yüklenemedi:',err);
+  slides.forEach((s,i)=>{
+   if(!s.title)s.title='Slayt '+(i+1);
+   if(!s.time)s.time=40;
+   if(!s.notes)s.notes='';
+  });
+  toast('Konuşmacı notları yüklenemedi.');
+ }
+ render();
+ setInterval(tick,1000);
+}
+boot();

@@ -1,26 +1,26 @@
 # AI 101 for technology — Konuşmacı notları
 
-Toplam: 16 sahne · 10 dakika
+Toplam: 15 sahne · 10 dakika
 
 ## 1. AI 101 for technology — 20 sn
 
-Bugün “AI çok iyi, hayatımız değişecek” demeyeceğim; bunu zaten biliyoruz. On dakika sonunda dört terimi ayıracağız, doğru işi doğru modele vereceğiz, lokal modelin ne zaman mantıklı olduğunu göreceğiz ve agent kurarken nerede frene basacağımızı konuşacağız. Bir de mantara güvenip güvenmeyeceğimizi çözeceğiz. T ile sayacı başlat.
+Bugün “AI çok iyi, hayatımız değişecek” demeyeceğim; bunu zaten biliyoruz. Bugün yapay zekayı sadece bir sohbet kutusu yani bir chatbot'dan farklı olarak ele alacağız. Bir fikrin doğru model ve doğru araçlarla nasıl çalışan bir sisteme dönüştüğünü konuşacağız. Bu tür örneklerimiz şirket içerisinde fazlasıyla mevcut ve onların bir kaçı ilerleyen saatlerde Cem'in güzel sunumu ile anlatılacak. Yeterince spoiler verdiğime göre devam edebilirim. Uzun zamandır zaten ai 1. dereceden odak noktamız. Gençimizden, yaşlımıza herkesin aktif olarak kullandığı bir durumdayız. Geçen haftalarda köy konusunu anlat. Bugünde elimden geldikçe sizlere doğru işi doğru modele vereceğimiz, lokal modelin ne zaman mantıklı olduğunu göreceğiz ve agent kurarken nerede frene basacağımızı konuşacağız. Ve tabi ai kör körüne güvenmelimiyiz konusuna değineceğim.
 
-## 2. AI nedir? — 30 sn
+## 2. AI nedir? — 50 sn
 
-AI’ı en basit haliyle şöyle düşünün: geçmiş örneklerde hangi girdinin hangi sonuçla eşleştiğini inceler ve kalıbı öğrenir. Yeni bir mesaj geldiğinde, “bu daha önce gördüklerimden hangisine benziyor?” diye tahmin üretir. Örneğin “ekran siyah, maç yok” mesajını yayın sorunu olarak sınıflandırabilir. Klasik AI bir sınıf veya sayı tahmin eder. Üretken AI ise aynı olasılık mantığıyla sıradaki kelimeleri, pikselleri ya da kodu üretir. Buradaki kritik kelime tahmin: yüzde doksan iki, yüzde yüz gerçek demek değildir.
+Yapay zeka (ai) nedir dediğimizde hepimizin kafasında bir şeyler oluşuyor. En basit haliyle şöyle düşünün: Yapay zeka, bilgisayarların veya makinelerin insan gibi düşünmesi, öğrenmesi ve karar vermesi için yapılan akıllı program diyebiliriz. Bugün yapay zekayı kaç kişi kullandı desem salonun yaklaşık %80 ellerini havada görebileceğimi düşünüyorum. Ama %20 lik kısımda aslında direk olmasada kullanmış olduğu herhangi bir ott cihazından kullanmıştır. Telefonun yüz tanıması bile aslında bir yapay zeka örneği çünkü. Bunları söyleme nedenim aslında yapay zeka artık hayatımızın merkezinde. Eskiden teknoloji bizim verdiğimiz komutları harfiyen yerine getiren pasif bir araçtı; biz basardık, o çalışırdı. Bugün ise teknoloji artık bizimle birlikte düşünen, bizi tahmin eden ve hayatı bizim yerimize kolaylaştıran aktif bir ortağa dönüştü. Peki biz yapay zekayı nasıl daha verimli ve işimize adepte edebiliriz.
 
-## 3. Bir AI sistemini insan gibi düşün — 40 sn
+## 3. Model nedir? — 35 sn
 
-Bu dört kavramı bir insan analojisiyle düşünelim. LLM beynimiz: dili anlıyor, metin üretiyor ve örüntüler üzerinden akıl yürütüyor. Fakat şirketimizin güncel bilgisini kendiliğinden bilmiyor. RAG, beynin önüne doğru kitabı açıyor; soruyla ilgili belgeyi bulup modele veriyor. MCP standart bağlantı noktası: AI uygulamasını API’lere, dosyalara, veritabanlarına ve servislere ortak bir yöntemle bağlıyor. Agent ise beyin ve eller birlikte: hedefe ulaşmak için hangi adımı atacağını seçiyor, araç kullanıyor, sonucu görüp devam ediyor. Digiturk örneği: LLM yanıtı yazar, RAG güncel paket belgesini getirir, MCP izinli sistemlere bağlanır, agent bilgileri toplayıp yapılacak işi takip eder. Kritik işlem varsa son onay yine insanda kalır. Bunlar birbirinin alternatifi değil; aynı sistemin katmanları.
+Model, büyük miktarda veriyle eğitilmiş ve verilen bilgiyi anlayıp buna göre çıktı üretebilen yapay zekâ sistemidir. Metni analiz edebilir, soruları cevaplayabilir, kod yazabilir, özet çıkarabilir ve problem çözebilir.
+Örnek modeller: GPT-5.6, GPT-4.1, Claude, Gemini, Llama.
 
-## 4. Model ve product arasındaki fark nedir? — 35 sn
+## 4. En iyi model, her işte en iyi seçim değildir — 50 sn
 
-Model ve product kelimelerini ayıralım. Model arabanın engine’i: dil, reasoning, vision ve code yeteneğini sağlar. Product ise kullandığımız arabanın tamamı; UI, model, tools, verilen context, memory, permissions ve guardrails birlikte çalışır. Bu yüzden aynı model bir chat product içinde yalnızca yanıt yazarken, bir coding agent içinde dosya okuyabilir, terminal kullanabilir ve test çalıştırabilir. “Hangi AI’ı kullanalım?” sorusunda yalnızca model adına bakmayın. Önce hangi product deneyimini ve hangi tools ile guardrails’i istediğinizi belirleyin.
+En güçlü modeli her çağrıda kullanmak, mahalleye ekmek almaya yarış arabasıyla gitmek gibi. Örneğin OpenAI’nin güncel kataloğunda Luna’nın input fiyatı 20 cent, Astra’nın 10 dolar: elli kat fark. Peki hangi modeli hangi iş için kullanmalıyız? Ben bunun için farklı API’lerden veri çekip işlediğim bir site hazırladım: Mercury AI Bench. Haftalık takip ediyorum; hangi işe hangi model ve fiyatını oradan bakıyorum. Benchmark sitelerinin yanında YouTube kanallarını da izliyorum. Çünkü firmalar kendi benchmark’larını bildiği için skoru şişirecek şekilde optimize edebiliyor. Daha gerçekçi sonuç için Venelin Valkov’u takip ediyorum; modelleri aynı prompt ile yan yana test ediyor.
+## 5. Bir AI sistemini insan gibi düşün — 45 sn
 
-## 5. En iyi model, her işte en iyi seçim değildir — 45 sn
-
-En güçlü modeli her çağrıda kullanmak, mahalleye ekmek almaya yarış arabasıyla gitmek gibi. OpenAI’nin güncel kataloğunda Luna’nın input fiyatı 20 cent, Astra’nın 10 dolar: elli kat fark. Basit sınıflandırma ve çıkarımda küçük model; çoğu RAG ve günlük kod işinde dengeli model; zor agent döngülerinde güçlü model. Arama için ayrıca web arama aracı gerekir. Bunlar API liste fiyatları; gerçek maliyet çıktı uzunluğu, cache, araç çağrısı ve tekrar sayısına bağlı. Doğru seçim için kendi işimizden 20-50 örnekle kalite, gecikme ve maliyeti birlikte ölçeriz.
+Peki AI sistemini daha verimli kullanmak için neler yapmalıyız? Önce çok duyduğumuz terimleri insan analojisiyle açalım. LLM beynimiz: dili anlıyor, metin üretiyor, örüntülerden akıl yürütüyor; ama şirketimizin güncel bilgisini kendiliğinden bilmiyor. RAG, beynin önüne doğru kitabı açıyor. MCP standart bağlantı: AI’ı API’lere, dosyalara, veritabanlarına bağlar — yani eller / araçlar. Memory hafıza: bağlamı ve geçmişi tutar. Yapay zeka (LLM) sadece düşünen bir beyindir; Agent ise bu beyne hafıza, planlama ve eller (araçlar) verilmiş halidir. Formül: Model + Tools + Memory = Agent. Ekrandaki n8n örneğinde de Redis memory agent’a bağlı. Jira Task Açılır → Task Detayları Alınır → AI Analiz Eder → Developer Agent Çalışır → Kod Değişikliği → PR → Jira Güncelleme → Bildirim. Kritik işlemde son onay yine insanda. Zaten bunun örneğini hermes üzerinden birazdan yapılacak. O yüzden bu kısmı sadece ön bilgilendirme olarak geçiyorum.
 
 ## 6. Her işi AI'ya vermek akıllıca mı? — 40 sn
 
@@ -38,31 +38,29 @@ Lokal LLM, model ağırlıklarının kendi cihazımızda veya kontrol ettiğimiz
 
 Önce cihazın kaldırıp kaldırmadığını kontrol edin. CanIRun.ai, Qwen 3 8B için minimum 4,5, önerilen 7,5 GB bellek; Q4_K_M quantization için yaklaşık 4,6 GB VRAM gösteriyor. Quantization modeli sıkıştırır: daha az bellek, biraz kalite kaybı. Sonra Hugging Face’e gidiyoruz. Model ağırlıkları, model card, lisans ve çalıştırma örnekleri burada. Hugging Face modellerin GitHub’ı gibi. Başlangıçta lisansı, dosya biçimini ve kaynağın güvenilirliğini kontrol edin; Ollama veya LM Studio en kolay masaüstü yollarından.
 
-## 10. Vibe coding: IDE mi, CLI mı? — 40 sn
+## 10. Vibe coding: IDE mi, CLI mı? — 60 sn
 
-Vibe coding doğal dille hızlı yazılım üretmek. IDE; satır içi öneri, görsel diff ve küçük değişikliklerde daha kontrollü. CLI agent; repo çapında arama, test ve uzun görevlerde güçlü. En iyi seçim ya o ya bu değil: fikir ve küçük edit IDE’de, tekrarlı veya repo çapındaki işi CLI’da yürütüp sonucu yine IDE’de inceleyebilirsiniz. Dört fren: küçük commit, test, diff review ve gizli bilgiyi bağlama vermemek.
+Kodu satır satır kendimiz yazmak yerine, yapmak istediğimiz şeyi yapay zekâya doğal bir dille anlatarak yazılım geliştirme yaklaşımıdır. Yani artık “Bu fonksiyonu nasıl kodlarım?” yerine,“Bana kullanıcıların giriş yapabileceği bir sistem oluştur” diyoruz. Yapay zekâ kodu yazıyor, dosyaları oluşturuyor, hataları buluyor ve gerektiğinde düzeltiyor. Biz ise daha çok ne istediğimize ve ortaya çıkan sonucun doğru olup olmadığına odaklanıyoruz.
+Peki bunu nerede yapıyoruz?
+İki temel seçenek var: IDE ve CLI.
+Cursor gibi IDE’ler görsel bir arayüz sunuyor; kodu ve yapılan değişiklikleri takip etmek daha kolay. Bu yüzden başlangıç için oldukça uygun. Claude Code veya Codex gibi CLI araçları ise terminal üzerinden çalışıyor. Daha teknik görünüyorlar ama özellikle büyük projelerde ve agent tabanlı çalışmalarda oldukça güçlüler. Kısacası, vibe coding’de mesele daha az kod yazmak değil; doğru şeyi tarif edip yapay zekâyı doğru yönlendirmek. 
 
-## 11. Agent nedir, neden kurulur? — 45 sn
-
-Agent, hedef için araç kullanan ve aldığı sonuca göre sonraki adımı seçen sistem. Neden kurarız? İş çok adımlıysa, kurallar kırılgansa ve doküman gibi yapılandırılmamış veriyi yorumlamak gerekiyorsa. En kolay başlangıç, hazır bir coding agent veya agent builder içinde tek agent kurmak: bir model, iki üç iyi tanımlı araç, açık talimat, maksimum adım ve insan onayı. İlk günden agentlar ordusu kurmayın. Örneğin Digiturk’te bir incident özet agentı logları ve runbook’u okur, taslak çıkarır; prod aksiyonunu insan onaylar.
-
-## 12. Prompt engineering neden önemli? — 45 sn
+## 11. Prompt engineering neden önemli? — 45 sn
 
 Prompt engineering sihirli kelime bulmak değil; işi ölçülebilir bir mini briefe çevirmek. Ne istiyorum, hangi bağlam var, sınır ne, çıktı biçimi ne, nasıl kontrol edeceğim? “Bunu düzelt” yerine diff’i ve kabul kriterini verip risk, kanıt ve test tablosu isteyin. Bir örnek çıktı vermek formatı güçlü biçimde öğretir. PromptingGuide.ai başlangıç için düzenli bir kaynak. Videoyu oynatın. Modelden alkış değil itiraz isteyin: en zayıf varsayımım ne, hangi kanıt fikrimi değiştirir?
 
-## 13. SKILL.md ve .md dosyaları ne işe yarar? — 40 sn
+## 12. SKILL.md ve .md dosyaları ne işe yarar? — 40 sn
 
 Markdown, biçimlendirmesi sade bir metin dosyasıdır; nokta md uzantısı bunu söyler. README projenin ne olduğunu, AGENTS.md agentın bu repoda hangi kurallarla çalışacağını anlatabilir. SKILL.md ise tekrar eden bir işi yapma kılavuzudur: skillin adı ve ne zaman devreye gireceği üst bölümde, izlenecek adımlar aşağıdadır; yanında script, referans ve şablon da bulunabilir. Yani skill modeli daha zeki yapmaz; deneyimli bir ekip arkadaşının playbook’unu önüne koyar. En güvenilir başlangıç Agent Skills açık standardı ile OpenAI ve Anthropic’in güncel resmî depolarıdır. skills.sh keşif için yararlı bir topluluk dizinidir; indirme sayısı güvenlik garantisi değildir. Skill çalıştırılabilir scriptlere ve araçlara yön verebildiği için kod gibi inceleyin: yayıncıyı, SKILL.md içeriğini, scriptleri, istediği izinleri ve sabitlediğiniz sürümü kontrol edin.
 
-## 14. gstack nedir? — 35 sn
+## 13. gstack nedir? — 35 sn
 
 gstack, Garry Tan’ın kullandığı planlama, tasarım, review, QA ve shipping rollerini komutlara dönüştüren açık kaynak bir skill paketi. Değeri modelden çok süreçte: fikri CEO gözüyle sorgula, planı mühendislik açısından incele, kodu review et, staging’i QA et. Yani tek bir uzun prompt yerine tekrarlanabilir kalite kapıları. Kurmadan önce açık kaynak olsa bile setup scriptini okuyun, sürümü sabitleyin ve ekip politikanıza göre uyarlayın.
 
-## 15. Graphify: kod tabanını haritaya çevir — 40 sn
+## 14. Graphify: kod tabanını haritaya çevir — 40 sn
 
 Graphify, kodu fonksiyon, sınıf, import ve çağrı ilişkilerinden bir bilgi grafiğine dönüştürüyor. AI “billing’i kim kullanıyor?” sorusunda her dosyayı yeniden tahmin etmek yerine gerçek yolları izleyebiliyor. Site, parsing’in cihazda çalıştığını, telemetri olmadığını ve çekirdek aracın Apache 2.0 olduğunu söylüyor. Güvenlik sorunu çıkarmaz diyemeyiz: kurduğumuz paket bir supply-chain bileşeni, graph.json mimari bilgi içerir ve seçtiğimiz model sağlayıcısına sorgu gidebilir. Sürümü sabitleyin, kaynağı inceleyin, graph dosyalarını repoya yanlışlıkla commit etmeyin ve MCP yetkisini sınırlandırın.
 
-## 16. Pazartesi hangi AI işini kuruyoruz? — 20 sn
+## 15. Teşekkürler — 15 sn
 
-Pazartesi bir pilot seçin: arşivde sahne bulma, incident özeti ya da PR risk analizi. Önce mevcut süreyi ve hata oranını ölçün. Sonra küçük bir modelle başlayıp kalite yetmezse yukarı çıkın. İzinli bağlam verin, çıktı için kaynak veya test isteyin, kritik aksiyonu insan onayına bağlayın. Başarı yalnızca etkileyici demo değil: kalite, gecikme, maliyet ve güvenlik birlikte. Teşekkürler.
-
+Geleceğin sorusu “Yapay zekâ işimizi alacak mı?” değil, “Onunla birlikte ne kadar ileri gidebiliriz?” Teşekkürler. Erdinç Yılmaz.

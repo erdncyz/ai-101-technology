@@ -1,6 +1,6 @@
 # AI 101 for technology — Kullanım
 
-16 sahne, ~10 dakikalık plan. Statik site; Netlify’de build yok.
+15 sahne, ~10 dakikalık plan. Statik site; Netlify’de build yok.
 
 ## Netlify
 
@@ -16,12 +16,15 @@ npx netlify deploy --prod --dir=.
 
 ## Yerel
 
-`index.html` dosyasını tarayıcıda aç veya:
+`index.html` dosyasını tarayıcıda çift tıklayarak açabilirsin. Konuşmacı notları `notes.js` içinde de durur; sunucu şart değil.
+
+Canlı düzenleme için (markdown’ı kaydedip yenilemek):
 
 ```bash
 npx serve .
 ```
 
+Konuşmacı metinleri `Konusmaci-notlari.md` dosyasındandır (`## N. Başlık — X sn`). HTTP ile açınca bu dosya okunur; `file://` veya önizlemede gömülü kopya kullanılır.
 ## Projeksiyon + laptop (önerilen)
 
 macOS’ta ekranları **Aynalama değil, Genişlet** yap.
