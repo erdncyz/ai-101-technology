@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090b">
+  <meta name="description" content="Digiturk Technology Talks: AI 101 — model, product, agent ve lokal LLM’e 10 dakikalık giriş.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="AI 101 for technology · Digiturk">
+  <meta property="og:description" content="10 dakikada model → araç → agent. Digiturk Technology Talks sunumu.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/model-car.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>AI 101 for technology · Digiturk</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2309090b'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23ff774d'%3Eai%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#1" onclick="event.preventDefault();go(0)" class="brand" aria-label="İlk slayt">ai<span>101</span><i>/</i><small>technology</small></a>
+    <span id="sectionLabel"></span>
+    <button id="overviewBtn" title="Tüm slaytlar (G)" onclick="openOverview()">Slaytlar <span>▦</span></button>
+  </header>
+  <main id="stage" aria-live="polite"></main>
+  <footer class="toolbar">
+    <div class="tools">
+      <button onclick="openInfo()" aria-label="Kullanım ve kaynaklar">?</button>
+    </div>
+    <div class="nav">
+      <button id="prev" onclick="go(index-1)" aria-label="Önceki slayt">←</button>
+      <span id="counter"></span>
+      <button id="next" onclick="go(index+1)" aria-label="Sonraki slayt">→</button>
+    </div>
+    <div class="tools">
+      <button id="timer" onclick="toggleTimer()" title="Sayacı başlat / duraklat (T)">▷ 00:00</button>
+      <button id="fsBtn" onclick="fullscreen()" title="Tam ekran (F)" aria-label="Tam ekran">⛶</button>
+    </div>
+  </footer>
+  <div class="progress" id="progress"></div>
+  <dialog id="modal">
+    <button class="close" onclick="closeModal()" aria-label="Kapat">×</button>
+    <div id="modalContent"></div>
+  </dialog>
+  <div id="toast" role="status"></div>
+  <script src="slides.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

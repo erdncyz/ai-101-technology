@@ -1,0 +1,13 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# Yerel tek-dosya çıktısı (Netlify'e yüklenmez)
+AI-101-Sunum.html
+
+# Netlify / editör
+.netlify/
+.idea/
+.vscode/
+*.log
