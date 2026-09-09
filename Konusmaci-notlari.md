@@ -18,6 +18,7 @@ Model, büyük miktarda veriyle eğitilmiş ve verilen bilgiyi anlayıp buna gö
 ## 4. En iyi model, her işte en iyi seçim değildir — 50 sn
 
 En güçlü modeli her çağrıda kullanmak, mahalleye ekmek almaya yarış arabasıyla gitmek gibi. Örneğin OpenAI’nin güncel kataloğunda Luna’nın input fiyatı 20 cent, Astra’nın 10 dolar: elli kat fark. Peki hangi modeli hangi iş için kullanmalıyız? Ben bunun için farklı API’lerden veri çekip işlediğim bir site hazırladım: Mercury AI Bench. Haftalık takip ediyorum; hangi işe hangi model ve fiyatını oradan bakıyorum. Benchmark sitelerinin yanında YouTube kanallarını da izliyorum. Çünkü firmalar kendi benchmark’larını bildiği için skoru şişirecek şekilde optimize edebiliyor. Daha gerçekçi sonuç için Venelin Valkov’u takip ediyorum; modelleri aynı prompt ile yan yana test ediyor.
+
 ## 5. Bir AI sistemini insan gibi düşün — 45 sn
 
 Peki AI sistemini daha verimli kullanmak için neler yapmalıyız? Önce çok duyduğumuz terimleri insan analojisiyle açalım. LLM beynimiz: dili anlıyor, metin üretiyor, örüntülerden akıl yürütüyor; ama şirketimizin güncel bilgisini kendiliğinden bilmiyor. RAG, beynin önüne doğru kitabı açıyor. MCP standart bağlantı: AI’ı API’lere, dosyalara, veritabanlarına bağlar — yani eller / araçlar. Memory hafıza: bağlamı ve geçmişi tutar. Yapay zeka (LLM) sadece düşünen bir beyindir; Agent ise bu beyne hafıza, planlama ve eller (araçlar) verilmiş halidir. Formül: Model + Tools + Memory = Agent. Ekrandaki n8n örneğinde de Redis memory agent’a bağlı. Jira Task Açılır → Task Detayları Alınır → AI Analiz Eder → Developer Agent Çalışır → Kod Değişikliği → PR → Jira Güncelleme → Bildirim. Kritik işlemde son onay yine insanda. Zaten bunun örneğini hermes üzerinden birazdan yapılacak. O yüzden bu kısmı sadece ön bilgilendirme olarak geçiyorum.
@@ -38,12 +39,12 @@ Lokal LLM, model ağırlıklarının kendi cihazımızda veya kontrol ettiğimiz
 
 Önce cihazın kaldırıp kaldırmadığını kontrol edin. CanIRun.ai, Qwen 3 8B için minimum 4,5, önerilen 7,5 GB bellek; Q4_K_M quantization için yaklaşık 4,6 GB VRAM gösteriyor. Quantization modeli sıkıştırır: daha az bellek, biraz kalite kaybı. Sonra Hugging Face’e gidiyoruz. Model ağırlıkları, model card, lisans ve çalıştırma örnekleri burada. Hugging Face modellerin GitHub’ı gibi. Başlangıçta lisansı, dosya biçimini ve kaynağın güvenilirliğini kontrol edin; Ollama veya LM Studio en kolay masaüstü yollarından.
 
-## 10. Vibe coding: IDE mi, CLI mı? — 60 sn
+## 10. Spec-Driven Development(Vibe coding): IDE mi, CLI mı? — 60 sn
 
 Kodu satır satır kendimiz yazmak yerine, yapmak istediğimiz şeyi yapay zekâya doğal bir dille anlatarak yazılım geliştirme yaklaşımıdır. Yani artık “Bu fonksiyonu nasıl kodlarım?” yerine,“Bana kullanıcıların giriş yapabileceği bir sistem oluştur” diyoruz. Yapay zekâ kodu yazıyor, dosyaları oluşturuyor, hataları buluyor ve gerektiğinde düzeltiyor. Biz ise daha çok ne istediğimize ve ortaya çıkan sonucun doğru olup olmadığına odaklanıyoruz.
 Peki bunu nerede yapıyoruz?
 İki temel seçenek var: IDE ve CLI.
-Cursor gibi IDE’ler görsel bir arayüz sunuyor; kodu ve yapılan değişiklikleri takip etmek daha kolay. Bu yüzden başlangıç için oldukça uygun. Claude Code veya Codex gibi CLI araçları ise terminal üzerinden çalışıyor. Daha teknik görünüyorlar ama özellikle büyük projelerde ve agent tabanlı çalışmalarda oldukça güçlüler. Kısacası, vibe coding’de mesele daha az kod yazmak değil; doğru şeyi tarif edip yapay zekâyı doğru yönlendirmek. 
+Cursor gibi IDE’ler görsel bir arayüz sunuyor; kodu ve yapılan değişiklikleri takip etmek daha kolay. Bu yüzden başlangıç için oldukça uygun. Claude Code veya Codex gibi CLI araçları ise terminal üzerinden çalışıyor. Daha teknik görünüyorlar ama özellikle büyük projelerde ve agent tabanlı çalışmalarda oldukça güçlüler. Kısacası, Spec-Driven Development(vibe coding)’de mesele daha az kod yazmak değil; doğru şeyi tarif edip yapay zekâyı doğru yönlendirmek. 
 
 ## 11. Prompt engineering neden önemli? — 45 sn
 
@@ -51,15 +52,15 @@ Prompt engineering sihirli kelime bulmak değil; işi ölçülebilir bir mini br
 
 ## 12. SKILL.md ve .md dosyaları ne işe yarar? — 40 sn
 
-Markdown, biçimlendirmesi sade bir metin dosyasıdır; nokta md uzantısı bunu söyler. README projenin ne olduğunu, AGENTS.md agentın bu repoda hangi kurallarla çalışacağını anlatabilir. SKILL.md ise tekrar eden bir işi yapma kılavuzudur: skillin adı ve ne zaman devreye gireceği üst bölümde, izlenecek adımlar aşağıdadır; yanında script, referans ve şablon da bulunabilir. Yani skill modeli daha zeki yapmaz; deneyimli bir ekip arkadaşının playbook’unu önüne koyar. En güvenilir başlangıç Agent Skills açık standardı ile OpenAI ve Anthropic’in güncel resmî depolarıdır. skills.sh keşif için yararlı bir topluluk dizinidir; indirme sayısı güvenlik garantisi değildir. Skill çalıştırılabilir scriptlere ve araçlara yön verebildiği için kod gibi inceleyin: yayıncıyı, SKILL.md içeriğini, scriptleri, istediği izinleri ve sabitlediğiniz sürümü kontrol edin.
+Markdown, biçimlendirmesi sade bir metin dosyasıdır; nokta md uzantısı bunu söyler. README projenin ne olduğunu, AGENTS.md ise sistemin kimliğini, davranışını ve genel kurallarını belirleyen ana kılavuzken skill.md bu sistemin yapabileceği belirli ve uzmanlaşmış tek bir işin yönergelerini içerir. Kısacası agent.md, sistemimizin "karakteri ve beynidir. skill.md ise sistemimizin "uzmanlık alanları ve araçlarıdır. Yapay zeka projelerimiz büyüdükçe yönetilemez bir karmaşaya dönüşür. Ama güzel yönetilen bir şirket gib kurgulanırsa agent.md vizyoner bir lider skill.md ise işinin ehli bir çalışan olarak düşünülür. 
 
 ## 13. gstack nedir? — 35 sn
 
-gstack, Garry Tan’ın kullandığı planlama, tasarım, review, QA ve shipping rollerini komutlara dönüştüren açık kaynak bir skill paketi. Değeri modelden çok süreçte: fikri CEO gözüyle sorgula, planı mühendislik açısından incele, kodu review et, staging’i QA et. Yani tek bir uzun prompt yerine tekrarlanabilir kalite kapıları. Kurmadan önce açık kaynak olsa bile setup scriptini okuyun, sürümü sabitleyin ve ekip politikanıza göre uyarlayın.
+gstack, Y Combinator CEO'su Garry Tan’ın geliştirmiş olduğu planlama, tasarım, review, QA ve shipping rollerini komutlara dönüştüren açık kaynak bir skill paketi. Genel amacı yapay zekâ asistandan, farklı görevlerde uzmanlaşmış bir yazılım geliştirme ekibine dönüştüren açık kaynaklı bir araç seti. Mesela bir web uygulamasına login özelliği ekledim. Gstack kullanarak önce geliştirme planımı kontrol ettirebilirim. Kod bittikten sonra /review ile kod incelemesi yaptırabilirim, /qa ile uygulamanın gerçekten çalışıp çalışmadığını test ettirebilirim ve son olarak /ship ile değişikliği gönderime hazırlayabilirim
 
 ## 14. Graphify: kod tabanını haritaya çevir — 40 sn
 
-Graphify, kodu fonksiyon, sınıf, import ve çağrı ilişkilerinden bir bilgi grafiğine dönüştürüyor. AI “billing’i kim kullanıyor?” sorusunda her dosyayı yeniden tahmin etmek yerine gerçek yolları izleyebiliyor. Site, parsing’in cihazda çalıştığını, telemetri olmadığını ve çekirdek aracın Apache 2.0 olduğunu söylüyor. Güvenlik sorunu çıkarmaz diyemeyiz: kurduğumuz paket bir supply-chain bileşeni, graph.json mimari bilgi içerir ve seçtiğimiz model sağlayıcısına sorgu gidebilir. Sürümü sabitleyin, kaynağı inceleyin, graph dosyalarını repoya yanlışlıkla commit etmeyin ve MCP yetkisini sınırlandırın.
+Graphify’ı kısaca kodun haritasını çıkaran bir araç olarak düşünebiliriz. Büyük bir projede sadece dosyalara tek tek bakmak yerine, hangi parçanın hangi parçayla bağlantılı olduğunu görsel olarak gösteriyor. Örneğin bir fonksiyonda değişiklik yapacağım zaman, bu değişiklik başka nereleri etkiler, hangi fonksiyonlar birbirini çağırıyor veya sistemde aşırı bağımlı hale gelmiş kritik bir nokta var mı, bunu Graphify üzerinden görebiliyor yapay zeka. Böylece özellikle büyük projelerde sistemi anlamak ve değişikliklerin etkisini görmek kolaylaşıyor.
 
 ## 15. Teşekkürler — 15 sn
 
