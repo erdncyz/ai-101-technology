@@ -10,10 +10,22 @@ Bugün “AI çok iyi, hayatımız değişecek” demeyeceğim; bunu zaten biliy
 
 Yapay zeka (ai) nedir dediğimizde hepimizin kafasında bir şeyler oluşuyor. En basit haliyle şöyle düşünün: Yapay zeka, bilgisayarların veya makinelerin insan gibi düşünmesi, öğrenmesi ve karar vermesi için yapılan akıllı program diyebiliriz. Bugün yapay zekayı kaç kişi kullandı desem salonun yaklaşık %80 ellerini havada görebileceğimi düşünüyorum. Ama %20 lik kısımda aslında direk olmasada kullanmış olduğu herhangi bir ott cihazından kullanmıştır. Telefonun yüz tanıması bile aslında bir yapay zeka örneği çünkü. Bunları söyleme nedenim aslında yapay zeka artık hayatımızın merkezinde. Eskiden teknoloji bizim verdiğimiz komutları harfiyen yerine getiren pasif bir araçtı; biz basardık, o çalışırdı. Bugün ise teknoloji artık bizimle birlikte düşünen, bizi tahmin eden ve hayatı bizim yerimize kolaylaştıran aktif bir ortağa dönüştü. Peki biz yapay zekayı nasıl daha verimli ve işimize adepte edebiliriz.
 
-## 3. Model nedir? — 35 sn
+## 3. Model ve LLM nedir? — 35 sn
 
-Model, büyük miktarda veriyle eğitilmiş ve verilen bilgiyi anlayıp buna göre çıktı üretebilen yapay zekâ sistemidir. Metni analiz edebilir, soruları cevaplayabilir, kod yazabilir, özet çıkarabilir ve problem çözebilir.
-Örnek modeller: GPT-5.6, GPT-4.1, Claude, Gemini, Llama.
+Model, büyük miktarda veriyle eğitilmiş ve aldığı bilgileri kullanarak çıktı üretebilen yapay zekâ sistemidir. Farklı görevler için farklı modeller kullanılabilir.
+Örneğin, bir görüntü modeli bir fotoğrafa bakıp “Bu bir kedi” diyebilir. Bu bir modeldir, ancak LLM değildir.
+LLM (Large Language Model), yani Büyük Dil Modeli ise özellikle metin ve dil üzerine eğitilmiş bir model türüdür. Soruları cevaplayabilir, metin yazabilir, özet çıkarabilir, kod yazabilir ve problem çözebilir.
+Kısaca:
+Her LLM bir modeldir, ancak her model bir LLM değildir.
+Model örnekleri:
+* Görüntü modeli (YOLOv8)
+* Ses modeli (Whisper)
+LLM örnekleri:
+* GPT-5.6
+* GPT-4.1
+* Claude
+* Gemini
+* Llama
 
 ## 4. En iyi model, her işte en iyi seçim değildir — 50 sn
 

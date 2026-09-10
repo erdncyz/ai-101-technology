@@ -39,6 +39,13 @@
 .model-what-copy h2{font-size:clamp(34px,3.8vw,64px);margin:0 0 12px}
 .model-what-copy .lead{font-size:clamp(16px,1.4vw,22px);line-height:1.45;margin:0 0 16px;color:var(--muted)}
 .model-what-copy .lead b{color:var(--ink);font-weight:650}
+.model-llm-compare{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 12px}
+.model-type{margin:0;padding:12px;border:1px solid #ffffff18;border-radius:10px;background:#ffffff08}
+.model-type.llm{border-color:#ff774d66;background:#ff774d0d}
+.model-type b{display:block;color:var(--orange);font:650 11px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:1px;margin-bottom:5px}
+.model-type span{font-size:13px;line-height:1.35;color:#c9c5c0}
+.model-rule{margin:0 0 14px;padding-left:12px;border-left:2px solid var(--orange);font-size:14px;line-height:1.5;color:#c9c5c0}
+.model-rule b{color:var(--ink);font-weight:650}
 .model-can{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 14px}
 .model-can p{margin:0;padding:10px 12px;border:1px solid #ffffff18;border-radius:10px;background:#ffffff08}
 .model-can p:last-child{grid-column:1/-1}
@@ -49,7 +56,7 @@
 .model-what-visual{margin:0;display:flex;flex-direction:column;align-items:center}
 .model-what-visual img{width:100%;max-height:68vh;object-fit:contain;border-radius:14px;border:1px solid #ffffff18;box-shadow:0 22px 55px #0008;background:#0b0b0c}
 .model-what-visual figcaption{margin-top:8px;font-size:11px;color:var(--muted);letter-spacing:.8px}
-@media(max-width:800px){.model-what-slide{grid-template-columns:1fr}.model-can{grid-template-columns:1fr}.model-can p:last-child{grid-column:auto}.model-what-visual img{max-height:34vh}}
+@media(max-width:800px){.model-what-slide{grid-template-columns:1fr}.model-llm-compare{grid-template-columns:1fr}.model-can{grid-template-columns:1fr}.model-can p:last-child{grid-column:auto}.model-what-visual img{max-height:34vh}}
 @media(min-width:801px) and (max-height:760px){.model-what-copy .lead{font-size:15px;margin-bottom:10px}.model-can p{padding:8px 10px}.model-can span{font-size:12px}.model-what-visual img{max-height:58vh}}
 
 /* Model seçimi · Mercury + Venelin */
