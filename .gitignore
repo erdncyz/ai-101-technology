@@ -5,6 +5,10 @@ Thumbs.db
 
 # Yerel tek-dosya çıktısı (Netlify'e yüklenmez)
 AI-101-Sunum.html
+.pptx-venv/
+.pptx-tmp/
+.pptx-render/
+node_modules/
 
 # Netlify / editör
 .netlify/
