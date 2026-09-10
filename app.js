@@ -234,6 +234,10 @@ function applySpeakerNotes(md){
   slide.notes=sec.notes;
  });
 }
+function moveSlide(from,to){
+ const [slide]=slides.splice(from,1);
+ slides.splice(to,0,slide);
+}
 async function loadSpeakerNotesMarkdown(){
  const embedded=typeof SPEAKER_NOTES_MD==='string'?SPEAKER_NOTES_MD:'';
  if(location.protocol==='file:')return embedded;
@@ -266,6 +270,7 @@ async function boot(){
   });
   toast('Konuşmacı notları yüklenemedi.');
  }
+ moveSlide(5,2);
  render();
  setInterval(tick,1000);
 }
