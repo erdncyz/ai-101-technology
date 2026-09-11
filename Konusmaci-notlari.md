@@ -4,13 +4,17 @@ Toplam: 15 sahne · 10 dakika
 
 ## 1. AI 101 for technology — 20 sn
 
-Bugün “AI çok iyi, hayatımız değişecek” demeyeceğim; bunu zaten biliyoruz. Bugün yapay zekayı sadece bir sohbet kutusu yani bir chatbot'dan farklı olarak ele alacağız. Bir fikrin doğru model ve doğru araçlarla nasıl çalışan bir sisteme dönüştüğünü konuşacağız. Bu tür örneklerimiz şirket içerisinde fazlasıyla mevcut ve onların bir kaçı ilerleyen saatlerde Cem'in güzel sunumu ile anlatılacak. Yeterince spoiler verdiğime göre devam edebilirim. Uzun zamandır zaten ai 1. dereceden odak noktamız. Gençimizden, yaşlımıza herkesin aktif olarak kullandığı bir durumdayız. Geçen haftalarda köy konusunu anlat. Bugünde elimden geldikçe sizlere doğru işi doğru modele vereceğimiz, lokal modelin ne zaman mantıklı olduğunu göreceğiz ve agent kurarken nerede frene basacağımızı konuşacağız. Ve tabi ai kör körüne güvenmelimiyiz konusuna değineceğim.
+Bugün “AI çok iyi, hayatımız değişecek” demeyeceğim; bunu zaten biliyoruz. Bugün yapay zekayı sadece bir sohbet kutusu yani bir chatbot'dan farklı olarak ele alacağız. Ve daha verimli kullanma yönlerinden bahsedicem. Bir fikrin doğru model ve doğru araçlarla nasıl çalışan bir sisteme dönüştüğünü konuşacağız. Bu tür örneklerimiz şirket içerisinde fazlasıyla mevcut ve onların bir kaçı ilerleyen saatlerde Cem ve Kerem'in güzel sunumu ile anlatılacak. Yeterince spoiler verdiğime göre devam edebilirim. Uzun zamandır zaten yapay zeka (ai) 1. dereceden odak noktamız. Gençimizden, yaşlımıza herkesin aktif olarak kullandığı bir süreçteyiz. Geçen haftalarda köye gittiğimde 80 yaşında bir teyzenin bana bir şey var konuşuyorlar onu banada yap dediğine denk geldim ve gösterdikten sonra açıp kamerayı açıp domateslerini gösterip yapraklarının neden sarardığını sordu. Bugünde elimden geldikçe sizlere doğru işi doğru modele vereceğimiz, lokal modelin ne zaman mantıklı olduğunu göreceğiz ve agent kurarken nerede frene basacağımızı konuşacağız. Ve tabi ai kör körüne güvenmelimiyiz konusuna değineceğim.
 
 ## 2. AI nedir? — 50 sn
 
-Yapay zeka (ai) nedir dediğimizde hepimizin kafasında bir şeyler oluşuyor. En basit haliyle şöyle düşünün: Yapay zeka, bilgisayarların veya makinelerin insan gibi düşünmesi, öğrenmesi ve karar vermesi için yapılan akıllı program diyebiliriz. Bugün yapay zekayı kaç kişi kullandı desem salonun yaklaşık %80 ellerini havada görebileceğimi düşünüyorum. Ama %20 lik kısımda aslında direk olmasada kullanmış olduğu herhangi bir ott cihazından kullanmıştır. Telefonun yüz tanıması bile aslında bir yapay zeka örneği çünkü. Bunları söyleme nedenim aslında yapay zeka artık hayatımızın merkezinde. Eskiden teknoloji bizim verdiğimiz komutları harfiyen yerine getiren pasif bir araçtı; biz basardık, o çalışırdı. Bugün ise teknoloji artık bizimle birlikte düşünen, bizi tahmin eden ve hayatı bizim yerimize kolaylaştıran aktif bir ortağa dönüştü. Peki biz yapay zekayı nasıl daha verimli ve işimize adepte edebiliriz.
+Yapay zeka (ai) nedir dediğimizde hepimizin kafasında bir şeyler oluşuyor. En basit haliyle şöyle düşünün: Yapay zeka, bilgisayarların veya makinelerin insan gibi düşünmesi, öğrenmesi ve karar vermesi için yapılan akıllı program diyebiliriz. Bu kısmı yani çalışma prensibini Mahmut zaten açıklamıştı o yüzden kısma artık aşina olduğumuzu düşünüyorum. Peki bugün yapay zekayı kaç kişi kullandı desem salonun yaklaşık %80 ellerini havada görebileceğimi düşünüyorum. Ama %20 lik kısımda aslında direk olmasada kullanmış olduğu herhangi bir ott cihazından kullanmıştır. Çünkü telefonun yüz tanıması bile aslında bir yapay zeka örneği. Yapay zekayı sadece chatbot ya da bir assistan olarak görmemeliyiz. Bunları söyleme nedenim aslında yapay zeka artık hayatımızın merkezinde. Eskiden teknoloji bizim verdiğimiz komutları harfiyen yerine getiren pasif bir araçtı; biz basardık, o çalışırdı. Bugün ise teknoloji artık bizimle birlikte düşünen, bizi tahmin eden ve hayatı bizim yerimize kolaylaştıran aktif bir ortağa dönüştü. Peki biz yapay zekayı nasıl daha verimli ve işimize ve hayatımıza adepte edebiliriz.
 
-## 3. Model ve LLM nedir? — 35 sn
+## 3. Her işi AI'ya vermek akıllıca mı? — 40 sn
+
+Herkes AI’ın devasa enerji ayak izinden bahsediyor. “ChatGPT küçük bir ülkenin kullandığı elektrik kadar enerji tüketiyor” veya “Her AI sorgusu bir şişe suyu içiyor” gibi başlıkları görmüşsünüzdür. AI’yı açmak bir düğmeye basmak kadar kolay — o yüzden her işi ona yıkmak da kolay geliyor. Ama her küçük soruyu, her basit kontrolü, her iki dakikalık işi modele vermek hem pahalıya hem karmaşaya gider. Akıllıca kullanım şu: gerçekten zaman kazandıran, zor veya tekrarlayan işe ver. Kendinin daha hızlı bitireceği işi vermezsin. En güçlü modeli de her sefere koşturma. Kısaca: AI varsayılan cevap olmasın; bilinçli bir tercih olsun.
+
+## 4. Model ve LLM nedir? — 35 sn
 
 Model, büyük miktarda veriyle eğitilmiş ve aldığı bilgileri kullanarak çıktı üretebilen yapay zekâ sistemidir. Farklı görevler için farklı modeller kullanılabilir. Örneğin, bir görüntü modeli bir fotoğrafa bakıp “Bu bir kedi” diyebilir. Bu bir modeldir, ancak LLM değildir.
 LLM (Large Language Model), yani Büyük Dil Modeli ise özellikle metin ve dil üzerine eğitilmiş bir model türüdür. Soruları cevaplayabilir, metin yazabilir, özet çıkarabilir, kod yazabilir ve problem çözebilir.
@@ -26,17 +30,13 @@ LLM örnekleri:
 * Gemini
 * Llama
 
-## 4. En iyi model, her işte en iyi seçim değildir — 50 sn
+## 5. En iyi model, her işte en iyi seçim değildir — 50 sn
 
 En güçlü modeli her çağrıda kullanmak, mahalleye ekmek almaya yarış arabasıyla gitmek gibi. Örneğin OpenAI’nin güncel kataloğunda Luna’nın input fiyatı 20 cent, Astra’nın 10 dolar: elli kat fark. Peki hangi modeli hangi iş için kullanmalıyız? Ben bunun için farklı API’lerden veri çekip işlediğim bir site hazırladım: Mercury AI Bench. Haftalık takip ediyorum; hangi işe hangi model ve fiyatını oradan bakıyorum. Benchmark sitelerinin yanında YouTube kanallarını da izliyorum. Çünkü firmalar kendi modelleri için benchmark’larını bildiği için skoru şişirecek şekilde optimize edebiliyor. Daha gerçekçi sonuç için Venelin Valkov’u takip ediyorum; modelleri aynı prompt ile yan yana test ediyor.
 
-## 5. Bir AI sistemini insan gibi düşün — 45 sn
+## 6. Bir AI sistemini insan gibi düşün — 45 sn
 
 Peki AI sistemini daha verimli kullanmak için neler yapmalıyız? Önce çok duyduğumuz terimleri insan analojisiyle açalım. LLM beynimiz: dili anlıyor, metin üretiyor, örüntülerden akıl yürütüyor; ama şirketimizin güncel bilgisini kendiliğinden bilmiyor. RAG, beynin önüne doğru kitabı açıyor. MCP(Sinir sistemi) standart bağlantı: AI’ı API’lere, dosyalara, veritabanlarına bağlar — yani eller / araçlar. Memory hafıza: bağlamı ve geçmişi tutar. Yapay zeka (LLM) sadece düşünen bir beyindir; Agent ise bu beyne hafıza, planlama ve eller (araçlar) verilmiş halidir. Formül: Model + Tools + Memory = Agent. Ekrandaki n8n örneğinde de Redis memory agent’a bağlı. Jira Task Açılır → Task Detayları Alınır → AI Analiz Eder → Developer Agent Çalışır → Kod Değişikliği → PR → Jira Güncelleme → Bildirim. Kritik işlemde son onay yine insanda. Zaten bunun örneğini hermes üzerinden birazdan yapılacak. O yüzden bu kısmı sadece ön bilgilendirme olarak geçiyorum.
-
-## 6. Her işi AI'ya vermek akıllıca mı? — 40 sn
-
-Bu görsele bakın: “AI düşünmek için milyar watt harcıyor.” Sayı abartılı olabilir; mesele sayı değil. AI’yı açmak bir düğmeye basmak kadar kolay — o yüzden her işi ona yıkmak da kolay geliyor. Ama her küçük soruyu, her basit kontrolü, her iki dakikalık işi modele vermek hem pahalıya hem karmaşaya gider. Akıllıca kullanım şu: gerçekten zaman kazandıran, zor veya tekrarlayan işe ver. Kendinin daha hızlı biteceği işi vermezsin. En güçlü modeli de her sefere koşturma. Kısaca: AI varsayılan cevap olmasın; bilinçli bir tercih olsun.
 
 ## 7. AI'a tamamen güvenmeli miyiz? — 40 sn
 
